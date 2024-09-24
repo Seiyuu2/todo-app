@@ -90,9 +90,8 @@ function TodoItem({ todo, index, onComplete, onEdit, onSave, onRemove }) {
           <span>{todo.text}</span>
           <button
             onClick={() => onComplete(index)}
-            disabled={todo.isComplete || todo.isEditing}
           >
-            Complete
+            {todo.isComplete ? 'Undo' : 'Complete'}
           </button>
           <button
             onClick={() => onEdit(index)}

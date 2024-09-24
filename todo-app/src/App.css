@@ -1,44 +1,69 @@
-.todo-app {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #1a1a1a, #333);
+  color: #f1c40f;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-app {
+  background-color: #262626;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  color: #f1c40f;
 }
 
 h1 {
-  color: #333;
   margin-bottom: 20px;
+  color: #f1c40f;
 }
 
 .input-container {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  margin-bottom: 20px;
 }
 
 input[type="text"] {
   padding: 10px;
+  border: 1px solid #f1c40f;
+  background-color: #1a1a1a;
+  color: #f1c40f;
   width: 70%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: #f1c40f;
 }
 
 button {
   padding: 10px;
-  background-color: #007bff;
-  color: white;
   border: none;
-  border-radius: 4px;
+  background-color: #f1c40f;
+  color: #1a1a1a;
+  font-weight: bold;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #e2b607;
 }
 
 button:disabled {
-  background-color: #ccc;
+  background-color: #999;
+  color: #444;
   cursor: not-allowed;
 }
 
@@ -48,14 +73,36 @@ ul {
 }
 
 li {
+  background-color: #333;
+  border: 1px solid #444;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
 }
 
 li.completed span {
   text-decoration: line-through;
-  color: gray;
+  color: #999;
+}
+
+li span {
+  flex-grow: 1;
+  margin-right: 10px;
+  color: #f1c40f;
+}
+
+li input[type="text"] {
+  flex-grow: 1;
+  padding: 5px;
+  border: none;
+  background-color: #1a1a1a;
+  color: #f1c40f;
+  border-radius: 5px;
+}
+
+li input[type="text"]::placeholder {
+  color: #f1c40f;
 }
