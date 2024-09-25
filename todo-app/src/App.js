@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './App.css'; // Styling included here for presentable UI
+import todobgImage from './todobg.jpg'; // Adjust the name as necessar
+
 
 function TodoApp() {
   const [todos, setTodos] = useState([]);
